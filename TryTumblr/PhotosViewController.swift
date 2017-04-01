@@ -27,8 +27,21 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         let detailViewController = segue.destination as! DetailViewController
         // Pass on the data to the Detail ViewController by setting it's indexPathRow value
         detailViewController.index = index
+        
+        let post = posts[indexPath!.row]
+        
+        if let photos = post.value(forKeyPath: "photos") as? [NSDictionary] {
+            // photos is NOT nil, go ahead and access element 0 and run the code in the curly braces
+            let imageUrlString = photos[0].value(forKeyPath: "original_size.url") as? String
+            let imageUrl = URL(string: imageUrlString!)!
+            detailViewController.image = imageUrl
+        } else {
+            // photos is nil. Good thing we didn't try to unwrap it!
+            let imageUrl = URL(string: "https://i.imgur.com/tGbaZCY.jpg")!
+            detailViewController.image = imageUrl
+        }
+        
 
-        detailViewController.image = self.photoTableView.cellForRow(at: indexPath!)?.imageView?.image
     }
     
 

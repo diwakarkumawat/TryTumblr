@@ -12,7 +12,7 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
-    var image: UIImage!
+    var image: URL!
     
     var index: Int!
     
@@ -20,8 +20,8 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         // detailLabel.text = ("You tapped the cell at index \(index!)")
-        imageView.image = image
-        
+        //imageView.image = UIImage(
+        imageView.setImageWith(image)
     }
 
     override func didReceiveMemoryWarning() {
