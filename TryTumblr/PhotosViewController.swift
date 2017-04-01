@@ -27,7 +27,10 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         let detailViewController = segue.destination as! DetailViewController
         // Pass on the data to the Detail ViewController by setting it's indexPathRow value
         detailViewController.index = index
+
+        detailViewController.image = self.photoTableView.cellForRow(at: indexPath!)?.imageView?.image
     }
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         photoTableView.rowHeight = 240

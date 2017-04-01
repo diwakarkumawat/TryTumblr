@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="106"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uce-i6-bqS" id="ejZ-9V-2kX">
-                                            <rect key="frame" x="0.0" y="0.0" width="310" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="105.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xen-Bf-R1f">
@@ -45,7 +45,7 @@
                                         <connections>
                                             <outlet property="photoImageView" destination="FOd-nI-vY0" id="dyi-Ui-Dkm"/>
                                             <outlet property="photoLabel" destination="xen-Bf-R1f" id="F0w-Vq-yBc"/>
-                                            <segue destination="mLp-la-9uq" kind="push" id="xxH-hN-aKt"/>
+                                            <segue destination="mLp-la-9uq" kind="push" id="31z-sk-6KP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -70,19 +70,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="detailLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZKk-J3-Hky">
-                                <rect key="frame" x="51" y="127" width="308" height="50"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="jn3-Zy-OOV">
+                                <rect key="frame" x="81" y="195" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="dHn-49-dHL"/>
                     <connections>
-                        <outlet property="detailLabel" destination="ZKk-J3-Hky" id="zwc-dA-3mK"/>
+                        <outlet property="imageView" destination="jn3-Zy-OOV" id="WRl-a8-KX0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9P-m6-mCS" userLabel="First Responder" sceneMemberID="firstResponder"/>
