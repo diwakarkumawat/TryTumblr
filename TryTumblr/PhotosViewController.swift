@@ -89,11 +89,11 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
                         
                         // This is where you will store the returned array of posts in your posts property
                         self.posts = responseFieldDictionary["posts"] as! [NSDictionary]
+        		self.photoTableView.reloadData()
                     }
                 }
         });
         task.resume()
-        self.photoTableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
