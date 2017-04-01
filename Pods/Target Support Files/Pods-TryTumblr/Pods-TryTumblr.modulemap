@@ -1,0 +1,6 @@
+framework module Pods_TryTumblr {
+  umbrella header "Pods-TryTumblr-umbrella.h"
+
+  export *
+  module * { export * }
+}
